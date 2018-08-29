@@ -10,10 +10,9 @@ class App extends Component {
     series: [] //state
   }
   componentDidMount(){
-    const series = ["Black Mirror", "Rick & Morty"]; // actual array
-    setTimeout(() => {
-      this.setState({series}); // could do with only series inside as it should undestand you have same name
-    }, 2000);
+    fetch('http://api.tvmaze.com/search/shows?q=Vikings')//need to resolved
+      .then(response => response.json()) // need to parse the results and parse the responce
+      .then(json => this.setState({series: json}))
   }
   render() {
     return (
