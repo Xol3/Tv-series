@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import Intro from '../../components/Intro/Index.js'
 import SeriesList from '../../components/SeriesList';
 import Loader from '../../components/Loader'
 
@@ -21,6 +22,7 @@ class Series extends Component {
 
     return(
       <div>
+        <Intro message = "Aqui estan las series chingonas que le gustan a pancho" />
       <div>
         <input
         value={seriesName}

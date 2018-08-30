@@ -8,8 +8,12 @@ import './index.css';
 import App from '/home/javi/Documents/freeCodeCamp/Tv-series/movieapp/src/components/App/App.js';
 //let the app load faster on subsequent buisness and production
 import registerServiceWorker from './registerServiceWorker';
+import { BrowserRouter } from 'react-router-dom';
 
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <BrowserRouter><App/></BrowserRouter>,
+  document.getElementById('root')
+);
 registerServiceWorker();
